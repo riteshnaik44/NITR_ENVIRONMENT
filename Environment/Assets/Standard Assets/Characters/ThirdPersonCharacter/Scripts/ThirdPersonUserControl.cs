@@ -1,25 +1,32 @@
 using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
+using Mirror;
 
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
     [RequireComponent(typeof (ThirdPersonCharacter))]
-    public class ThirdPersonUserControl : MonoBehaviour
+    public class ThirdPersonUserControl : NetworkBehaviour
     {
         private ThirdPersonCharacter m_Character; // A reference to the ThirdPersonCharacter on the object
         private Transform m_Cam;                  // A reference to the main camera in the scenes transform
         private Vector3 m_CamForward;             // The current forward direction of the camera
         private Vector3 m_Move;
         private bool m_Jump;                      // the world-relative desired move direction, calculated from the camForward and user input.
-
+        [SerializeField]
+        private Camera cam;
         
         private void Start()
         {
-            // get the transform of the main camera
-            if (Camera.main != null)
+            if (!isLocalPlayer)
             {
-                m_Cam = Camera.main.transform;
+                return;
+            }
+
+            // get the transform of the main camera
+            if (cam != null)
+            {
+                m_Cam = cam.transform;
             }
             else
             {
@@ -35,6 +42,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         private void Update()
         {
+            
+            if (!isLocalPlayer)
+            {
+                return;
+            }
             if (!m_Jump)
             {
                 m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
@@ -45,6 +57,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         // Fixed update is called in sync with physics
         private void FixedUpdate()
         {
+            if (!isLocalPlayer)
+            {
+                return;
+            }
             // read inputs
             float h = CrossPlatformInputManager.GetAxis("Horizontal");
             float v = CrossPlatformInputManager.GetAxis("Vertical");
