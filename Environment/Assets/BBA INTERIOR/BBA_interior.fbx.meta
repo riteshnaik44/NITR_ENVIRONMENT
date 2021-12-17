@@ -3,7 +3,52 @@ guid: 0b7de0368116ac24f846f628b98d6cc1
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Matt paint black
+    second: {fileID: 2100000, guid: 6bc78d25def873243981fd293dc72dc0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: concrete
+    second: {fileID: 2100000, guid: 13ff76362d15e054ab42a537ef4d9ffb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dark_brown_wall_wood
+    second: {fileID: 2100000, guid: bdd0a9c7f60c0c647a9ab8d0e7e87bf5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: entrance_stair_brown
+    second: {fileID: 2100000, guid: c83c766f79d5227498572d82de4db7ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: entrance_stair_out
+    second: {fileID: 2100000, guid: a5eca4ff1627bcf4abcddeccacdb074b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: floor
+    second: {fileID: 2100000, guid: 18711f77bd99788499672b92989d563b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: red_velvet
+    second: {fileID: 2100000, guid: 74fc013f14b66a54782cb10ad4b1e287, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stage_floor_wood
+    second: {fileID: 2100000, guid: 56f8835c02400a6488a681d47f335555, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stage_side_brown
+    second: {fileID: 2100000, guid: 5e9f548dc406aca468796def2b0c7dc6, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
